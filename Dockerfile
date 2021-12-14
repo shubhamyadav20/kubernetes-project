@@ -5,7 +5,7 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/bo
 WORKDIR /var/www/html
 RUN unzip bonativo.zip
 RUN cp -rvf bonativo/* .
-#RUN rm -rf __MACOSX bonativo bonativo.zip
-RUN rm -rf bonativo bonativo.zip
+RUN rm -rf __MACOSX bonativo bonativo.zip
+#RUN rm -rf bonativo bonativo.zip
 CMD ["/usr/sbin/httpd","-D", "FOREGROUND"]
 EXPOSE 80
